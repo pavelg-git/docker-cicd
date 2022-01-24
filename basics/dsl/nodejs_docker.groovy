@@ -12,9 +12,9 @@ job('NodeJS Docker example') {
     
     steps {
         dockerBuildAndPublish {
-            repositoryName('yanivomc/amdocsapp')
+            repositoryName('pavelg-git/docker-cicd')
             tag('${GIT_REVISION,length=9}')
-            registryCredentials('yaniv-dockerhub')
+            registryCredentials('pavelg-git')
             buildContext('./basics/')
             forcePull(false)
             forceTag(false)
