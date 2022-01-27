@@ -12,9 +12,9 @@ job('NodeJS Docker example') {
     
     steps {
         dockerBuildAndPublish {
-            repositoryName('pavelg-git/docker-cicd')
+            repositoryName('pavelg48/docker-cicd')
             tag('${GIT_REVISION,length=9}')
-            registryCredentials('pavelg-git')
+            registryCredentials('pavelg48')
             buildContext('./basics/')
             forcePull(false)
             forceTag(false)
