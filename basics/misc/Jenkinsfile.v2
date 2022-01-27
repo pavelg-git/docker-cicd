@@ -29,12 +29,11 @@ node {
      }                                   
      mysql.stop()
    }                                     
-   stage('docker build/push') 
-  
-   {            
+   stage('docker build/push'){ 
+    dir("basics"){
      docker.withRegistry('https://index.docker.io/v1/', 'pavelg48') {
        def app = docker.build("pavelg48/docker-cicd:${commit_id}", '.').push()
+       }
      }                                     
-    
-  }                                       
+   }                                       
 }                                          
