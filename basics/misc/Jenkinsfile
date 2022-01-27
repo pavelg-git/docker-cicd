@@ -23,7 +23,7 @@ node {
       docker run --rm -tid --name docker_test -p 3000 pavelg48/docker-cicd:${commit_id}
       docker kill docker_test
       
-      '''
+     
      }
    }
 
